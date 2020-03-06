@@ -1,4 +1,4 @@
-package com.samoylov.mylaba1;
+package com.samoylov.laba21;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,15 +14,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(savedInstanceState==null)
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
 
-                Intent homeIntent = new Intent(MainActivity.this,
-                        HomeActivity.class);
-                startActivity(homeIntent);
-                finish();
-            }
-        },SPLASH_TIME_OUT);
+                    Intent intent = new Intent(MainActivity.this,
+                            HomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            },SPLASH_TIME_OUT);
+
     }
 }

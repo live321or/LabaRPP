@@ -56,7 +56,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.RvViewHolder>{
     }
 
     public class RvViewHolder extends RecyclerView.ViewHolder {
-        Translate t;
+
 
         TextView pos;
         private LinearLayout frameLayout;
@@ -68,9 +68,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.RvViewHolder>{
 
         void bind(int listIndex){
             pos.setText(nf.format(listIndex+1));
-//           pos.setText(String.valueOf(listIndex+1));
-//           t=new Translate(listIndex);
-//           pos.setText(t.getTranslate());
+
             if(listIndex%2==0){
                 frameLayout.setBackgroundColor(Color.parseColor("#cccccc"));
             }else{
