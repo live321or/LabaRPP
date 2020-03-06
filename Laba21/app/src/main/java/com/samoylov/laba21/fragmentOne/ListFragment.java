@@ -33,9 +33,14 @@ public class ListFragment extends Fragment {
 
     private RecyclerView rV;
     private RvAdapter rvAdapter;
-    private FragmentManager manager;
-    public ListFragment(FragmentManager manager){
-        this.manager=manager;
+    public FragmentManager manager;
+    public ListFragment(){
+//        this.manager=manager;
+    }
+    public static ListFragment newInstance(FragmentManager fm){
+        ListFragment f =new ListFragment();
+        f.manager=fm;
+        return f;
     }
 
     @Override
@@ -64,7 +69,7 @@ public class ListFragment extends Fragment {
                 technologies=new ArrayList<>(response.body());
                 rvAdapter=new RvAdapter(technologies,manager,20);
                 rV.setAdapter(rvAdapter);
-                Toast.makeText(getView().getContext(),"Success",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getView().getContext(),"Success",Toast.LENGTH_SHORT).show();
             }
 
             @Override

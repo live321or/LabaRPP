@@ -18,7 +18,10 @@ private FragmentManager manager;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         manager = getSupportFragmentManager();
-        listFragment = new ListFragment(manager);
+        listFragment = new ListFragment();
+        listFragment=ListFragment.newInstance(manager);
+
+
         getSupportFragmentManager().beginTransaction().replace(R.id.homeA ,listFragment).commit();
     }
     @Override

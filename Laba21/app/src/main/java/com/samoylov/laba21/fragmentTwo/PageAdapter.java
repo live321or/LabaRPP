@@ -16,6 +16,7 @@ public class PageAdapter extends FragmentStatePagerAdapter {
         this.technologies=technologies;
     }
 
+
     @NonNull
     @Override
     public Page getItem(int position) {

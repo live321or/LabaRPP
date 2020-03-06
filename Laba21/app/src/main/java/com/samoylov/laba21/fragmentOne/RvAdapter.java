@@ -63,7 +63,8 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.RvViewHolder> {
 //                                .getSimpleName())
 //                        .addToBackStack(null)
 //                        .commit();
-                ViewPagerFragment viewPagerFragment = new ViewPagerFragment(position+1,technologies);
+                ViewPagerFragment viewPagerFragment = new ViewPagerFragment();
+                viewPagerFragment=ViewPagerFragment.newI(position,technologies);
 
                 manager.beginTransaction()
                         .replace(R.id.homeA, viewPagerFragment)

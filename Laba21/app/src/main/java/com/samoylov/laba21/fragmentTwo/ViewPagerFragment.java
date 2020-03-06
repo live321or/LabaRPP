@@ -29,10 +29,15 @@ public class ViewPagerFragment extends Fragment {
     //    PagerAdapter pagerAdapter;
     int posItem;
     private ArrayList<Technologies> t;
-    public ViewPagerFragment(int posItem,ArrayList<Technologies> t) {
+    public ViewPagerFragment() {
         // Required empty public constructor
-        this.posItem=posItem;
-        this.t=t;
+
+    }
+    public static ViewPagerFragment newI(int pos,ArrayList<Technologies> t){
+        ViewPagerFragment vPF=new ViewPagerFragment();
+        vPF.posItem=pos;
+        vPF.t=t;
+        return vPF;
     }
 
 
