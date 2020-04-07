@@ -25,6 +25,7 @@ import java.util.ArrayList;
 
 
 public class RvAdapter extends RecyclerView.Adapter<RvAdapter.RvViewHolder> {
+
     private int count;
 
     private FragmentManager manager;

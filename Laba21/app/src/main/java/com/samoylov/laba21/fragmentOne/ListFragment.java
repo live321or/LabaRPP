@@ -17,6 +17,7 @@ import com.samoylov.laba21.HomeActivity;
 import com.samoylov.laba21.R;
 import com.samoylov.laba21.RequestInterface;
 import com.samoylov.laba21.Technologies;
+import com.samoylov.laba21.fragmentTwo.ViewPagerFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +52,10 @@ public class ListFragment extends Fragment {
         rV=v.findViewById(R.id.rv);
         LinearLayoutManager lm=new LinearLayoutManager(getActivity());
         rV.setLayoutManager(lm);
+        ViewPagerFragment viewPagerFragment = new ViewPagerFragment();
+        viewPagerFragment=ViewPagerFragment.newI(1,technologies);
 
-        return v;
+        return manager.beginTransaction().replace(R.id.homeA,);
     }
 
     private void getTechnologiesResponse() {

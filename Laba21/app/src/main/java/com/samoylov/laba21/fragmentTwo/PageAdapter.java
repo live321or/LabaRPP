@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class PageAdapter extends FragmentStatePagerAdapter {
     private ArrayList<Technologies> technologies;
-    public PageAdapter(@NonNull Fragment fr,ArrayList<Technologies> technologies) {
+    public PageAdapter(@NonNull Fragment fr,ArrayList<Technologies> technologiess) {
         super(fr.getChildFragmentManager());
         this.technologies=technologies;
     }
